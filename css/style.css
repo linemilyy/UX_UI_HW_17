@@ -62,18 +62,19 @@ li a:visited {
     margin: 15%;
   }
 h1{
-    font-size: 7vh;
+    font-size: 500%;
     font-weight: 900;
     justify-content: left;
 }
 h3 {
-    font-size: 3vw;
+    font-size: 200%;
     font-weight: 500;
 }
+
 .footer {
   display: flex;
   flex-direction: row;
-  position: absolute;
+
   bottom: 0;
   height: 20px;
   width: 100%;
@@ -106,23 +107,39 @@ h3 {
 
 #profilePic {
   grid-area: profilePic;
-  margin: 0px 20% 20% 0px;
+  margin: 0px 10% 0px 20%;
 }
 
 #descriptionMe {
   grid-area: descriptionMe;
-  align-items:center;
   font-size: 150%;
-  margin: 0px 0px 20% 20%;
-
+  margin: 0px 0px 0px 20%;
 }
 
-
 #heroImgGrid {
-  margin: 5%;
+  margin: 1%;
   display: grid;
   grid-template-columns: 35% 65%;
   grid-template-areas:
   "profilePic descriptionMe";
 }
 
+#skillsGrid {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: 5% 95%;
+  grid-template-areas:
+  "skillsTitle descriptionSkills";
+}
+#skillsTitle {
+  grid-area: skillsTitle;
+  margin: 0px 10% 20% 0px;
+}
+
+#descriptionSkills {
+  grid-area: descriptionSkills;
+  align-items:center;
+  font-size: 150%;
+  margin: 0px 0px 0px 20%;
+
+}

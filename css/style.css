@@ -99,15 +99,16 @@ h3 {
   height: 3vh;
 }
 
-#profilePic img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
+
 
 #profilePic {
   grid-area: profilePic;
-  margin: 0px 10% 0px 20%;
+  background-image: url(../Images/profile.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: auto;
+  
 }
 
 #descriptionMe {
@@ -117,7 +118,7 @@ h3 {
 }
 
 #heroImgGrid {
-  margin: 1%;
+  margin: 5%;
   display: grid;
   grid-template-columns: 35% 65%;
   grid-template-areas:
@@ -133,8 +134,10 @@ h3 {
 }
 #skillsTitle {
   grid-area: skillsTitle;
-  margin: 0px 10% 20% 0px;
+
 }
+
+*{outline: 1px solid red;}
 
 #descriptionSkills {
   grid-area: descriptionSkills;

@@ -8,6 +8,13 @@ body {
   background-position: center; 
   background-size: cover;
 }
+/* not used */
+.layout {
+  display:flex;
+  flex-direction:column;
+  justify-content: space-between;
+  min-height:100%;
+}
 
 .navBar {
   display: flex;
@@ -62,12 +69,12 @@ li a:visited {
     margin: 15%;
   }
 h1{
-    font-size: 500%;
+    font-size: 5em;
     font-weight: 900;
     justify-content: left;
 }
 h3 {
-    font-size: 200%;
+    font-size: 2em;
     font-weight: 500;
 }
 
@@ -82,7 +89,7 @@ h3 {
 
 .copyright {
   display: flex;
-  font-size: 1.75vh;
+  font-size: 0.75em;
   margin-left: 1%;
 }
 
@@ -99,8 +106,6 @@ h3 {
   height: 3vh;
 }
 
-
-
 #profilePic {
   grid-area: profilePic;
   background-image: url(../Images/profile.jpg);
@@ -108,13 +113,14 @@ h3 {
   background-repeat: no-repeat;
   height: 100%;
   width: auto;
-  
+
 }
 
 #descriptionMe {
   grid-area: descriptionMe;
-  font-size: 150%;
-  margin: 0px 0px 0px 20%;
+  font-size: 1.25em;
+  margin: 0px 0px 0px 5%;
+
 }
 
 #heroImgGrid {
@@ -128,21 +134,51 @@ h3 {
 #skillsGrid {
   margin: 5%;
   display: grid;
-  grid-template-columns: 5% 95%;
+  grid-template-columns: 15% 85%;
   grid-template-areas:
   "skillsTitle descriptionSkills";
 }
+
 #skillsTitle {
   grid-area: skillsTitle;
-
 }
-
-*{outline: 1px solid red;}
 
 #descriptionSkills {
   grid-area: descriptionSkills;
   align-items:center;
-  font-size: 150%;
-  margin: 0px 0px 0px 20%;
+  font-size: 1.25em;
+  margin: 0px 0px 0px 5%;
+}
+
+*{outline: 1px solid red;}
+
+@media only screen and (max-width:640px) 
+{#heroImgGrid {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas:
+  "profilePic" 
+  "descriptionMe";
+}
+
+#skillsGrid {
+  margin: 5%;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-template-areas:
+  "skillsTitle descriptionSkills";
+  margin-top: 60px;
+}
+
+#descriptionMe {
+  font-size: 1em;
+  margin: 0px 0px 0px 0px;
+  
+  height: 550px;
+}
+
 
 }
+
